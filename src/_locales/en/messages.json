@@ -1,0 +1,39 @@
+{
+// in manifest.json and popup.html
+  "my_name" : {
+    "message"     : "WikiHub Notifications",
+    "description" : "The name of this chrome extension"
+  },
+  "my_desc" : {
+    "message"     : "Get Notifications of WikiHub",
+    "description" : "The description of this chrome extension"
+  },
+
+// in popup.js
+  "no_notifications" : {
+    "message"     : "No notifications",
+    "description" : "An error message in the popup window"
+  },
+  "must_be_invalid_token" : {
+    "message"     : "Your access token must be invalid.",
+    "description" : "An error message in the popup window"
+  },
+
+// in optinos.html
+  "label_of_token" : {
+    "message" : "Token",
+    "description" : "A lebel for the token input box in the optinos window"
+  },
+  "description_of_token" : {
+    "message" : "Please enter an access token first to access WikiHub API.<br/>\nGo to <a href='https://wikihub.io/settings/tokens' target='_blank'>https://wikihub.io/settings/tokens</a> to create one.",
+    "description" : "A description for a token in the optinos window"
+  },
+  "valid_token" : {
+    "message"     : "The token has been set successfully.",
+    "description" : "A success message in the optinos window"
+  },
+  "invalid_token" : {
+    "message"     : "The token is invalid.",
+    "description" : "An error message in the optinos window"
+  }
+}

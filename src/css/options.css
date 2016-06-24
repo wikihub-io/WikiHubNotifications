@@ -1,0 +1,14 @@
+html,
+body {
+  font-size: 30pt;
+  margin: 20px;
+}
+
+input {
+  font-size: 100%;
+}
+
+#footer {
+  font-size: 50%;
+  text-align: right;
+}

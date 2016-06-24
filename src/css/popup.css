@@ -1,0 +1,160 @@
+body {
+  margin: 5px;
+  padding: 0;
+  width: 500px;
+  font-size: 13px;
+  font-family: arial, sans-serif;
+  line-height: 1.4em;
+  overflow-x: hidden;
+}
+
+a {
+  color: #36C;
+}
+
+body > header {
+  margin: 5px 5px 5px 7px;
+}
+
+body > header h1 {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: #333;
+}
+
+#unread {
+  padding-left: 0.25em;
+}
+
+body > header nav {
+  float: right;
+  text-align: right;
+  font-size: 20px;
+}
+
+body > header nav a {
+  display: block;
+  margin-top: -2px;
+  float: right;
+  text-decoration: none;
+  color: black;
+  outline: none;
+}
+
+/* notifications */
+article {
+  margin: 0;
+  padding: 10px;
+  background-color: #d9d9d9;
+  border-radius:4px;
+  min-height: 400px;
+}
+
+article ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 1px 0;
+  max-height: 468px;
+  overflow-y: auto;
+}
+
+article ul li {
+  margin: 0 0 10px 0;
+  padding:10px;
+
+  background-color:#FFF;
+  border-radius:4px;
+
+  border-top:1px solid #DDD !important;
+  border-left:1px solid #DDD;
+  border-bottom:none !important;
+  box-shadow: 1px 1px 1px #AAA;
+}
+
+article ul li:last-child {
+  margin-bottom:0;
+}
+
+article ul li.notification {
+  cursor:pointer;
+}
+article ul li.notification:hover {
+  background-color:#edeff4;
+}
+
+article ul li.unread {
+  background-color:#ffffcc;
+}
+article ul li.unread:hover {
+  background-color:#ffffb0;
+}
+
+article ul li div.fa {
+  float:right;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+article ul li img {
+  float:left;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.4);
+  margin-right:10px;
+}
+
+article ul li a.datetime {
+  text-decoration: none;
+}
+article ul li a.datetime:hover {
+  text-decoration: underline;
+}
+
+article ul li .sender {
+  font-weight: bolder;
+}
+article ul li a.sender {
+  text-decoration: none;
+}
+article ul li a.sender:hover {
+  text-decoration: underline;
+}
+
+article ul li .community {
+  font-weight: bolder;
+}
+article ul li a.community {
+  text-decoration: none;
+}
+article ul li a.community:hover {
+  text-decoration: underline;
+}
+
+
+article ul li .clear {
+  clear: both;
+}
+
+/*
+ * Loading
+ */
+#loading {
+  display: none;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 3000;
+
+  background-color: #000;
+  filter: alpha(opacity=60);
+  -khtml-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+#loading img {
+  display: block;
+  position: fixed;
+  top: 50%; left: 50%;
+  margin: -30px 0 0 -30px;
+}
