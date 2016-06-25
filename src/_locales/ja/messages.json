@@ -1,0 +1,39 @@
+{
+// in manifest.json and popup.html
+  "my_name" : {
+    "message"     : "WikiHub の通知",
+    "description" : "The name of this chrome extension"
+  },
+  "my_desc" : {
+    "message"     : "WikiHub の通知を取得します。",
+    "description" : "The description of this chrome extension"
+  },
+
+// in popup.js
+  "no_notifications" : {
+    "message"     : "通知がありません。",
+    "description" : "An error message in the popup window"
+  },
+  "must_be_invalid_token" : {
+    "message"     : "設定されているアクセス・トークンが無効のようです。<br/>\n<a href='options.html'>オプション・ページ</a>で再度設定し直して下さい。",
+    "description" : "An error message in the popup window"
+  },
+
+// in optinos.html
+  "label_of_token" : {
+    "message" : "トークン",
+    "description" : "A lebel for the token input box in the optinos window"
+  },
+  "description_of_token" : {
+    "message" : "まず、WikiHub API を使用するためのアクセス・トークンを入力して下さい。<br/>\nアクセス・トークンは <a href='https://wikihub.io/settings/tokens' target='_blank'>https://wikihub.io/settings/tokens</a> で生成、取得することが出来ます。",
+    "description" : "A description for a token in the optinos window"
+  },
+  "valid_token" : {
+    "message"     : "トークンが設定されました。",
+    "description" : "A success message in the optinos window"
+  },
+  "invalid_token" : {
+    "message"     : "指定されたトークンは無効です。",
+    "description" : "An error message in the optinos window"
+  }
+}
