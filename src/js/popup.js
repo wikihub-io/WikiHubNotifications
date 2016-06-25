@@ -31,21 +31,23 @@ $(window).on('load', function () {
   $('h1').css({
     cursor : 'pointer'
   }).on('click', function () {
-    chrome.tabs.create({
-      url : BG.WHN.NOTIFICATIONS_URL
-    });
+    openWindow(BG.WHN.NOTIFICATIONS_URL, false);
   });
 });
 
 $(document).on('click', 'article a', function (event) {
   event.preventDefault();
   event.stopPropagation();
-  openWindowInBackground($(this).attr('href'));
+  if ($(this).attr('href') == 'options.html') {
+    openWindow($(this).attr('href'), false);
+  } else {
+    openWindow($(this).attr('href'), true);
+  }
   return false;
 });
 
 $(document).on('click', 'article li.notification', function (event) {
-  openWindowInBackground($(this).attr('data-url'));
+  openWindow($(this).attr('data-url'), true);
 });
 
 function updateBadge() {
@@ -135,10 +137,10 @@ function addOneNotificationToList(note, $ul) {
   $('<div/>').addClass('clear').appendTo($li);
 }
 
-function openWindowInBackground(url) {
+function openWindow(url, background) {
   chrome.tabs.create({
     url      : url,
-    selected : false
+    selected : !background
   });
 }
 

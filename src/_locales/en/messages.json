@@ -15,7 +15,7 @@
     "description" : "An error message in the popup window"
   },
   "must_be_invalid_token" : {
-    "message"     : "Your access token must be invalid.",
+    "message"     : "Your access token must be invalid.<br/>\nPlease re-enter an access token at <a href='options.html'>the options page</a>.",
     "description" : "An error message in the popup window"
   },
 
