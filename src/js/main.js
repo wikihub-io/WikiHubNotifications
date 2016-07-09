@@ -39,6 +39,9 @@ WikiHubNotifications.prototype = {
         self.timer = setTimeout(function() {
           self.init.call(self);
         }, self.TIMER_INTERVAL);
+      } else {
+        chrome.browserAction.setBadgeBackgroundColor({color : [255, 0, 0, 255]});
+        chrome.browserAction.setBadgeText({text : 'X'});
       }
       if (typeof callback == 'function') callback();
     });
@@ -47,7 +50,7 @@ WikiHubNotifications.prototype = {
   updateBadge : function() {
     var self = this;
 
-    chrome.browserAction.setBadgeBackgroundColor({color : [255, 0, 0, 255]});
+    chrome.browserAction.setBadgeBackgroundColor({color : [0, 152, 204, 255]});
     if (self.unreads.length) {
       chrome.browserAction.setBadgeText({text : '' + self.unreads.length});
     }
